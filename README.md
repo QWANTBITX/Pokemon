@@ -135,11 +135,19 @@ Si se registra correctamente, retorna el listado de pokémons del entrenador.
 
 | Recurso | Valor |
 |---------|-------|
-| Email entrenador | `ash@mail.com` |
+| Email entrenador Ash | `ash@mail.com` |
 | UUID entrenador Ash | `d4444444-4444-4444-4444-444444444444` |
+| Email entrenador Brock | `brock@mail.com` |
+| UUID entrenador Brock | `f6666666-6666-6666-6666-666666666666` |
 | UUID tipo Agua | `f3262c24-473d-437d-a5cf-e87673637954` |
 | UUID Bulbasaur | `12345678-1234-1234-1234-123456789012` |
 | UUID Squirtle | `23456789-2345-2345-2345-234567890123` |
+| UUID Psyduck | `45678901-4567-4567-4567-456789012345` |
+| UUID Vulpix | `56789012-5678-5678-5678-567890123456` |
+| UUID Bellsprout | `67890123-6789-6789-6789-678901234567` |
+| UUID Magikarp | `78901234-7890-7890-7890-789012345678` |
+
+Si la base de datos ya existía, ejecute `sql/seed_extra.sql` para insertar solo los registros nuevos.
 
 ## Estructura del proyecto
 

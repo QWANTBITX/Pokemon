@@ -114,3 +114,63 @@ pre.result {
   overflow-x: auto;
   max-height: 280px;
 }
+
+.developer-footer {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 12px;
+}
+
+.developer-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  margin-bottom: 0.35rem;
+}
+
+.developer-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 0.85rem;
+}
+
+.developer-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.developer-info span {
+  color: #a8dadc;
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
+.developer-email a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #90ee90;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.developer-email a:hover {
+  color: #ffd700;
+  transform: translateY(-1px);
+}
+
+.email-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
