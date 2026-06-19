@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon - Gestión</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Pokémon Manager</h1>
+    <p>Gestión de entrenadores y pokémons</p>
+  </header>
+
+  <main>
+    <section class="card" id="login-section">
+      <h2>1. Login entrenador</h2>
+      <form id="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="ash@mail.com" value="ash@mail.com" required>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <p id="login-result" class="result"></p>
+    </section>
+
+    <section class="card">
+      <h2>2. Pokémons por tipo</h2>
+      <form id="tipo-form">
+        <label for="tipo-uuid">UUID del tipo</label>
+        <input type="text" id="tipo-uuid" placeholder="UUID tipo_pokemon" value="f3262c24-473d-437d-a5cf-e87673637954" required>
+        <button type="submit">Listar por tipo</button>
+      </form>
+      <pre id="tipo-result" class="result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>3. Registrar pokémon</h2>
+      <form id="pokemon-form">
+        <label for="p-nombre">Nombre</label>
+        <input type="text" id="p-nombre" required>
+        <label for="p-descripcion">Descripción</label>
+        <input type="text" id="p-descripcion" required>
+        <label for="p-fecha">Fecha descubrimiento (YYYY/MM/DD)</label>
+        <input type="text" id="p-fecha" placeholder="2023/01/01" required>
+        <label for="p-generacion">Generación</label>
+        <input type="text" id="p-generacion" value="1" required>
+        <label for="p-tipo-id">Tipo ID</label>
+        <input type="text" id="p-tipo-id" value="1" required>
+        <label for="p-tipo-desc">Tipo descripción</label>
+        <input type="text" id="p-tipo-desc" value="Agua" required>
+        <label for="p-tipo-uuid">Tipo UUID</label>
+        <input type="text" id="p-tipo-uuid" value="f3262c24-473d-437d-a5cf-e87673637954" required>
+        <button type="submit">Registrar</button>
+      </form>
+      <pre id="pokemon-result" class="result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>4. Pokémons del entrenador</h2>
+      <button id="btn-listar-entrenador" disabled>Ver mis pokémons</button>
+      <pre id="entrenador-pokemons" class="result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>5. Capturar pokémon</h2>
+      <form id="captura-form">
+        <label for="captura-pokemon-uuid">UUID del pokémon (sin entrenador)</label>
+        <input type="text" id="captura-pokemon-uuid" placeholder="uuid del pokemon" required>
+        <button type="submit" id="btn-capturar" disabled>Agregar a mi equipo</button>
+      </form>
+      <pre id="captura-result" class="result"></pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
