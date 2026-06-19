@@ -1,0 +1,81 @@
+backend
+
+MODELO DATOS DEL MUNDO
+
+pokemon.captura
+ pokemon_id:integer (FK2)
+ entrenador_id: integer (FK1)
+
+pokemon.pokemon
+ id:serial
+ nombre: varchar (100)(0)
+ descripcion: text (0)
+ tipo_pokemon: integer: (0)(FKK)
+ fecha_descuubrimiento: integer (0)
+ uuid: varchar (100 (0)
+
+pokemon.entrenador
+ id:serial
+ nombre: varcahr (50) (0)
+ apellido: varcahr (50) (0)
+ fecha_nacimiento: date(0)
+ fecha_vinculacion: date(0)
+ pueblo_id: integer
+
+pokemon.pueblo
+id: serial
+nombre: varcahr (100) (0)
+uuid: varcahr (100) (0)
+
+pokemon.tipo_pokemon
+id: serial
+descripcion: varcahr (100) (0)
+uuid: varcahr (100) (0)
+
+RELACION DE SERVICIOS A IMPLEMENTAR
+
+listado de servicios a implementar
+
+01
+endpoint: /entrenador/login POST
+descripcion: permite obtener el uuid de un usuario registrado ene l sistema
+request: {"email":"ashmail.com"}
+Response: {"uuid":"f3262c24-473d-437d-a5cf-e87673637954"}
+
+02
+endpoint: /pokemons/{tipo} GET
+descripcion: permite listar todos los pokemones de un tipo registrados en el sistema
+request: /f3262c24-473d-437d-a5cf-e87673637954
+Response: [{"id":"1","nombre":"Bulbasaur", "descripcion":"planta","fecha_descubrimiento":"2023/01/01","generaciion":"1","uuid":"12345678-1234-1234-1234567890","tipo_pokemon":{"id":"1","descripcion":"agua","uuid":"123456-"}}{},{}]
+
+03
+endpoint: /pokemons POST
+descripcion: permite registrar un pokemon en el sistema
+request: {"nombre":"Programador","descripcion":"Desarrollador Full","fecha_descubrimiento":"2023/01/01","generacion","1","tipo_pokemon":{"id":"3","descripcion":"agua","uuid":"f3262c24-473d-437d-a5cf-e87673637954"}
+Response: [{"id";"1":"Programador","descripcion":"Desarrollador Full","fecha_descubrimiento":"2023/01/01","generacion","1","uuid":""xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "tipo_pokemon":{"id":"3","descripcion":"agua","uuid":"123456-"}}{}{}]
+
+04
+endpoint: /entrenador/{uuid}/pokemons GET
+descripcion: lista los pokemones de un entrenador
+request: /entrenador/f3262c24-473d-437d-a5cf-e87673637954/pokemons
+Response: [{"id":"1","nombre":"Bulbasaur", "descripcion":"planta","fecha_descubrimiento":"2023/01/01","generaciion":"1","uuid":"12345678-1234-1234-1234567890","tipo_pokemon":{"id":"1","descripcion":"agua","uuid":"123456-"}}{},{}]
+
+05endpoint: /entrenador/{uuid}/pokemons/{uuid}
+descripcion: agregar un pokemon al listado de pokemones del entrenador
+request: /entrenador/f3262c24-473d-437d-a5cf-e87673637954/pokemons/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx": corressponde a un pokemon que aun no tenga un entrenador
+Response: Si el pokemon ya esta asociado, debe retomar un mensaje que indique {"error":"true","message":"pokemon ya esta registrado al entrenador"}
+
+en caso de que el okemon se registre correctamente se debe retomar el listado de pokemones del entrenador
+
+
+conexion a la base de  datos
+DEFINA EN EL PROYECTO EL MOTOR DE BASE DE DATOS A UTILIZAR
+
+IMPLEMENTAR POR SERVICIOS:
+NO IMPLEMENTAR SWAGGER
+NO IMPLEMENTAR CORS
+
+CREAME UNA PAGINA WEB, CON README
+ 
